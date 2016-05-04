@@ -1,0 +1,19 @@
+{
+  "name": "my-project-name",
+  "version": "0.1.0",
+  "description": "grunt:~0.4.5,",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincetmx/ui101_batch9_group2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vincetmx/ui101_batch9_group2/issues"
+  },
+  "homepage": "https://github.com/vincetmx/ui101_batch9_group2#readme"
+}
