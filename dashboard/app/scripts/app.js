@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 /**
  * @ngdoc app
  * @name dashboard
@@ -7,3 +7,8 @@
  *
  * Main module of the application. Define the routing architecture for the app
  */
+
+var app = angular.module('myApp', ['ngRoute', 'ngAnimate']);
+app.config(function($routeProvider) {
+
+});
