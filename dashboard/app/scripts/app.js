@@ -8,7 +8,16 @@
  * Main module of the application. Define the routing architecture for the app
  */
 
-var app = angular.module('myApp', ['ngRoute', 'ngAnimate']);
-app.config(function($routeProvider) {
-    
+var app = angular.module('myApp', ['ui.router']);
+app.config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider.state('login', {
+        url: '/',
+        templateUrl: 'templates/login.html'
+        //controller: 'loginCtrl'
+    });
+
+
+
 });
