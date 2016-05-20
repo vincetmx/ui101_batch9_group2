@@ -1,0 +1,12 @@
+.login {
+    background-image: url("../images/src/app/background.jpg");
+    width:100%;
+    height: 800px;
+}
+.login-title {
+    color: #ffffff;
+}
+
+.login-form {
+    vertical: middle;
+}
