@@ -3,5 +3,7 @@
 // Description: Define the following functionalities:
 // Making service calls to login a user
 
-var login = angular.module(dashboard, []);
-
+var dashboard = angular.module('dashBoard', ['ngRoute', 'ngAnimate']);
+dashboard.config(function($routeProvider) {
+    
+});
