@@ -17,7 +17,4 @@ app.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: 'templates/login.html'
         //controller: 'loginCtrl'
     });
-
-
-
 });
