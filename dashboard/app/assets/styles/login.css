@@ -7,10 +7,10 @@ body {
 
 }
 .login-body {
-    position: relative;
-    vertical-align: middle;
+    position: absolute;
+    left:45%;
+    top: 25%;
     text-align: center;
-
 }
 .login-form {
 
