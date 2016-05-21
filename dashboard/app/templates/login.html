@@ -1,13 +1,19 @@
-<div class="login">
+<div class="login-body">
     <ng-form class="login-form" ng-controller="loginCtrl">
-        <div class="login-title">Login</div>
-        <br>
-        <div class="">
-            <input type="text" ng-model="username" ng-required=""> <!-- have a try ng-required -->
+
+        <div class="login-title">
+            Login
         </div>
         <br>
-        <div class="">
-            <input type="password" ng-model="password" ng-required="">
+
+        <div class="login-username">
+            <!-- have a try ng-required -->
+            <input id="login-username" type="text" ng-model="username" placeholder="username" ng-required="">
+        </div>
+        <br>
+
+        <div class="login-password">
+            <input id="login-password" type="password" ng-model="password" placeholder="password" ng-required="">
         </div>
     </ng-form>
 </div>
