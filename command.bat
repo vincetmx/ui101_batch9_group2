@@ -1,6 +1,7 @@
 @echo off
 set /p var=PleaseEnterVar:
 echo %var%
+echo %var%
 
 git pull
 git add --all
