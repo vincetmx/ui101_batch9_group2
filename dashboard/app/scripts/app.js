@@ -12,9 +12,14 @@ var app = angular.module('myApp', ['ui.router']);
 app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
 
-    $stateProvider.state('login', {
-        url: '/',
-        templateUrl: 'templates/login.html'
-        //controller: 'loginCtrl'
-    });
+    $stateProvider
+        .state('login', {
+            url: '/',
+            templateUrl: 'templates/login.html'
+            //controller: 'loginCtrl'
+        })
+        .state('root', {
+            url: '/root',
+            templateUrl: 'templates/root.html'
+        })
 });
