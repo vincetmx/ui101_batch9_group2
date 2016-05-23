@@ -1,7 +1,6 @@
 .login-container {
     background-image: url("../images/src/app/background.jpg");
     background-size: 100% 100%;
-    background-repeat: no-repeat;
     text-align: center;
     height:100vh;
     font-size: 15px;
@@ -22,8 +21,8 @@
 
 .login-body div {
     width: 60%;
-    margin: 5px auto;
-    padding: 10px 0px 10px 0px;
+    margin: 0px auto 10px auto;
+    padding: 0px 0px 10px 0px;
 }
 
 .login-form input{
