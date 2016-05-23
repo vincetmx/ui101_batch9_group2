@@ -23,5 +23,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: '/root',
             templateUrl: 'templates/root.html',
             css: '../assets/styles/root.css'
+            //controller: ''
         })
 });
