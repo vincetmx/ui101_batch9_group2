@@ -7,6 +7,7 @@
     font-size: 15px;
     font-family: 'Shadows Into Light', cursive;
     font-weight: bold;
+    box-sizing: border-box;
 }
 
 .login-body {
@@ -19,31 +20,28 @@
 
 }
 
-/*.login-form {*/
-    /*text-align: center;*/
-/*}*/
+.login-body div {
+    width: 60%;
+    margin: 5px auto;
+    padding: 10px;
+}
 
-/*.login-form div{*/
-    /*margin: 25px;*/
-/*}*/
+.login-form input{
+    width: 100%;
+    border-radius: 5px;
+}
 
-/*.login-form input{*/
-    /*width: 350px;*/
-    /*height: 30px;*/
-    /*border-radius: 5px;*/
-/*}*/
+.login-title {
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
 
-/*.login-title {*/
-    /*color: white;*/
-    /*border-bottom: 1px solid white;*/
-    /*padding-bottom: 20px;*/
-    /*font-size: 20px;*/
-/*}*/
-
-/*#submit-button {*/
-    /*opacity: 0.7;*/
-    /*background-color: lightgreen;*/
-    /*color:white;*/
-/*}*/
+#submit-button {
+    opacity: 0.7;
+    background-color: lightgreen;
+    color:white;
+}
 
 
