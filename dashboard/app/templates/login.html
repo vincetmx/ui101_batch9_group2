@@ -3,17 +3,17 @@
     <div class="login-body">
         <ng-form class="login-form" name="login" ng-controller="loginCtrl" ng-submit="login()">
 
-            <div class="login-title" style="border: 1px solid white">
+            <div class="login-title">
                 <span id="login-title">Login</span>
             </div>
 
-            <!--<div class="error-msg"  class="ng-hide">-->
-                <!--<span id="error-msg">{{error-msg}}</span>-->
-            <!--</div>-->
+            <div class="error-msg"  class="ng-hide">
+                <span id="error-msg">{{error-msg}}</span>
+            </div>
 
             <div class="login-username">
                 <!-- have a try ng-required -->
-                <input id="login-username" type="text" placeholder="Username">
+                <input id="login-username" type="text" placeholder="Username" autofocus>
             </div>
 
 

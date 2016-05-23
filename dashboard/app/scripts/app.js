@@ -15,15 +15,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('login', {
             url: '/',
-            templateUrl: 'templates/login.html',
+            templateUrl: 'templates/login.html'
             //controller: 'loginCtrl'
-            data: {
-                css: '../assets/styles/login.css'
-            }
         })
         .state('root', {
             url: '/root',
-            templateUrl: 'templates/root.html',
+            templateUrl: 'templates/root.html'
             //controller: ''
         })
 });
