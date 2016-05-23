@@ -16,7 +16,6 @@
     position: relative;
     margin: auto;
     transform: translateY(50%);
-
 }
 
 .login-body div {
@@ -27,9 +26,16 @@
 
 .login-form input{
     width: 100%;
+    height: 2vw;
     border-radius: 5px;
     border: 0px;
+    outline: none;
+}
+
+.login-form button{
+    width: 100%;
     height: 2vw;
+    border-radius: 5px;
     outline: none;
 }
 
@@ -46,10 +52,6 @@
     color:white;
 }
 
-input[type=text]:focus{
-    height:3vw;
-}
-
-input[type=password]:focus{
+input:focus{
     height:3vw;
 }
