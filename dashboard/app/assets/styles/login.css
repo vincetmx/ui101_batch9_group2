@@ -30,6 +30,7 @@
     border-radius: 5px;
     border: 0px;
     height: 2vw;
+    outline: none;
 }
 
 .login-title {
@@ -45,4 +46,10 @@
     color:white;
 }
 
+input[type=text]:focus{
+    height:3vw;
+}
 
+input[type=password]:focus{
+    height:3vw;
+}
