@@ -4,6 +4,5 @@ echo %var%
 
 git pull
 git add --all
-git commit -m"second page"
-pause
+git commit -m"%var%"
 git push
