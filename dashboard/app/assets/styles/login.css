@@ -1,26 +1,25 @@
 body {
+    box-sizing: border-box;
     background-image: url("../images/src/app/background.jpg");
     max-width:100%;
     height: auto;
     background-size: cover;
     background-repeat: no-repeat;
-
+    color:white;
 }
+
 .login-body {
-    position: absolute;
-    left:45%;
-    top: 25%;
+    width: 40%;
+    height:40%;
+    border:1px solid white;
+    margin:0 auto;
+    padding: 10px;
+}
+
+.login-form {
     text-align: center;
 }
-.login-form {
 
-}
 .login-title {
-    color: #ffffff;
-}
-.login-username {
-
-}
-.login-password {
-
+    color: white;
 }
