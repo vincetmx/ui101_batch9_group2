@@ -1,11 +1,14 @@
 <div class="login-body">
-    <ng-form class="login-form" ng-controller="loginCtrl">
+    <ng-form class="login-form" ng-controller="loginCtrl" ng-submit="login()">
 
         <div class="login-title" >
-            Login
+            <span id="login-title">Login</span>
         </div>
-
-
+<!--
+        <div class="error-msg"  class="ng-hide">
+            <span id="error-msg">{{error-msg}}</span>
+        </div>
+-->
         <div class="login-username">
             <!-- have a try ng-required -->
             <input id="login-username" type="text" ng-model="username" placeholder="Username" ng-required="">
@@ -17,7 +20,7 @@
         </div>
 
         <div class="submit-button">
-            <input id="submit-button" type="button" name="submitButton" value="Login">
+            <input id="submit-button" type="button" name="submitButton" value="Login" >
         </div>
 
     </ng-form>
