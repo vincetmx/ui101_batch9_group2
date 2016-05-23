@@ -1,13 +1,13 @@
-<div class="login-container">
+<div class="login-container" ng-controller="loginCtrl">
     <div class="login-body">
-        <ng-form class="login-form" name="login" ng-controller="loginCtrl" ng-submit="login()">
+        <ng-form class="login-form" name="login" ng-controller="loginCtrl" >
 
             <div class="login-title">
                 <span id="login-title">Login</span>
             </div>
 
             <div class="error-msg"  class="ng-hide">
-                <span id="error-msg">{{error-msg}}</span>
+                <span id="error-msg">{{errorMsg}}</span>
             </div>
 
             <div class="login-username">
@@ -21,7 +21,7 @@
             </div>
 
             <div class="submit-button">
-                <button id="submit-button" type="submit" value="Login">Login</button>
+                <button id="submit-button" type="submit" ng-click="login()">Login</button>
             </div>
 
         </ng-form>

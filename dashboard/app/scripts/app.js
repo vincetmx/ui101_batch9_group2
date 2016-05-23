@@ -15,8 +15,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('login', {
             url: '/',
-            templateUrl: 'templates/login.html'
-            //controller: 'loginCtrl'
+            templateUrl: 'templates/login.html',
+            controller: 'loginCtrl'
         })
         .state('root', {
             url: '/root',
