@@ -16,13 +16,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
         .state('login', {
             url: '/',
             templateUrl: 'templates/login.html',
-            css: '../assets/styles/login.css'
             //controller: 'loginCtrl'
+            data: {
+                css: '../assets/styles/login.css'
+            }
         })
         .state('root', {
             url: '/root',
             templateUrl: 'templates/root.html',
-            css: '../assets/styles/root.css'
             //controller: ''
         })
 });
