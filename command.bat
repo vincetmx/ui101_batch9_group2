@@ -4,6 +4,9 @@ echo %var%
 echo %var%
 
 git pull
+pause
 git add --all
+pause
 git commit -m"%var%"
+pause
 git push
