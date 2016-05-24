@@ -46,6 +46,10 @@
     font-size: 20px;
 }
 
+.error-msg {
+    background-color: red;
+}
+
 #submit-button {
     opacity: 0.7;
     background-color: lightgreen;

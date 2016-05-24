@@ -4,7 +4,7 @@
 // Making service calls to login a user
 
 
-app.controller('loginCtrl', function($scope, $http, $cookieStore, $location){
+app.controller('loginCtrl', function($scope, $http){
     var user = function(username, password) {
         this.userName = username;
         this.password = password;
@@ -19,15 +19,10 @@ app.controller('loginCtrl', function($scope, $http, $cookieStore, $location){
             data: users
         })
             .success(function(data, status, headers, config){
-                console.log("error");
-                if (data.authentication == "success") {
-                    // $scope.test = data.authentication;
-                    $cookieStore.put("username", $scope.username);
-                    $location.path("/root");
-                }
+                alert("error");
             })
             .error(function(data, status, headers, config){
-                console.log("error");
+                alert("error");
                 $scope.errorMsg = "Login is not correct, please try again!";
             });
     }
