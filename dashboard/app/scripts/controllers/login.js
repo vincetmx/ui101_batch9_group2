@@ -15,15 +15,15 @@ app.controller('loginCtrl', function($scope, $http){
 
         $http({
             method: 'POST',
-            url: 'http://localhost:3000/api/login',
+            url: '/api/login',
             data: users
         })
             .success(function(data, status, headers, config){
-                alert("error");
+                alert("success");
             })
             .error(function(data, status, headers, config){
-                alert("error");
                 $scope.errorMsg = "Login is not correct, please try again!";
             });
+
     }
 });
