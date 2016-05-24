@@ -1,29 +1,29 @@
 <div class="login-container" ng-controller="loginCtrl">
     <div class="login-body">
-        <ng-form class="login-form" name="login-form" ng-controller="loginCtrl" >
+        <form class="login-form" name="login-form" ng-controller="loginCtrl" >
 
             <div class="login-title">
                 <span id="login-title">Login</span>
             </div>
 
-            <div class="error-msg"  class="ng-hide">
+            <div class="error-msg">
                 <span id="error-msg">{{errorMsg}}</span>
             </div>
 
             <div class="login-username">
                 <!-- have a try ng-required -->
-                <input id="login-username" type="text" ng-model="username" placeholder=" Username">
+                <input id="login-username" type="text" ng-model="username" placeholder=" Username" ng-required>
             </div>
 
 
             <div class="login-password">
-                <input id="login-password" type="password" ng-model="password" placeholder=" Password">
+                <input id="login-password" type="password" ng-model="password" placeholder=" Password" required>
             </div>
 
             <div class="submit-button">
-                <button id="submit-button" type="submit" ng-click="login()">Login</button>
+                <button id="submit-button" type="submit" ng-click="login()" ng-disabled="login-form.$invalid">Login</button>
             </div>
 
-        </ng-form>
+        </form>
     </div>
 </div>
