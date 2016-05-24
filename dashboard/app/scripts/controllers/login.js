@@ -3,6 +3,7 @@
 // Description: Define the following functionalities:
 // Making service calls to login a user
 
+
 app.controller('loginCtrl', function($scope){
     var user = function(username, password) {
         this.userName = username;
