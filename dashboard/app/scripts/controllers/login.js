@@ -18,10 +18,13 @@ app.controller('loginCtrl', function($scope, $http){
             url: '/api/login',
             data: users
         })
-            .success(function(data, status, headers, config){
-                alert("success");
+            .success(function(data, status, headers, config, statusText){
+                if(data.authentication == "success") {
+                    $cookieStore.put("username", $scope.username);
+                    $location.path("/root");
+                }
             })
-            .error(function(data, status, headers, config){
+            .error(function(data, status, headers, config, statusText){
                 $scope.errorMsg = "Login is not correct, please try again!";
             });
 
