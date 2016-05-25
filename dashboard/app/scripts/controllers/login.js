@@ -4,7 +4,7 @@
 // Making service calls to login a user
 
 
-app.controller('loginCtrl', function($scope, $http, $location){
+app.controller('loginCtrl', function($scope, $http, $location, $cookieStore){
     var user = function(username, password) {
         this.userName = username;
         this.password = password;
@@ -20,7 +20,7 @@ app.controller('loginCtrl', function($scope, $http, $location){
         })
             .success(function(data, status, headers, config, statusText){
                 if(data.authentication == "success") {
-
+                    $cookieStore.put("username", $scope.username);
                     $location.path("/root");
                 }
             })
