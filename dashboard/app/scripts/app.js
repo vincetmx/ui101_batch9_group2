@@ -10,11 +10,11 @@
 
 var app = angular.module('myApp', ['ui.router', 'ngCookies']);
 app.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/login');
 
     $stateProvider
         .state('login', {
-            url: '/',
+            url: '/login',
             templateUrl: 'templates/login.html',
             controller: 'loginCtrl'
         })
