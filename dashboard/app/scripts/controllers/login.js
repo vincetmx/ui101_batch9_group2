@@ -3,8 +3,7 @@
 // Description: Define the following functionalities:
 // Making service calls to login a user
 
-
-app.controller('loginCtrl', function($scope, $http, $location, $cookieStore){
+app.controller('loginCtrl', function($scope, $http, $location, AuthService){
     var user = function(username, password) {
         this.userName = username;
         this.password = password;
@@ -20,8 +19,8 @@ app.controller('loginCtrl', function($scope, $http, $location, $cookieStore){
         })
             .success(function(data, status, headers, config, statusText){
                 if(data.authentication == "success") {
-                    $cookieStore.put("username", $scope.username);
-                    $location.path("/root");
+                    AuthService.WriteCookie($scope.username);
+                    $location.path("/root/overview");
                 }
             })
             .error(function(data, status, headers, config, statusText){

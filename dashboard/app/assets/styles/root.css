@@ -23,7 +23,6 @@
 .root-sidebar {
     float: left;
     width: 15vw;
-    height: 92vh;
     background-color: blue;
     display: inline-block;
 }
@@ -42,7 +41,6 @@
 .root-content {
     /*float: right;*/
     width: 80vw;
-    height: 92vh;
     background-color: red;
     display: inline-block;
     margin-left: auto;
