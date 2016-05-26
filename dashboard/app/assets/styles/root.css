@@ -47,6 +47,8 @@
 }
 
 .log-out {
-    /*float: right;*/
+    float: right;
+    position: relative;
+    right: 4%;
 }
 

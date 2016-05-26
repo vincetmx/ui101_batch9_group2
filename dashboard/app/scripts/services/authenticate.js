@@ -2,7 +2,7 @@
 // AUTHENTICATE SERVICE
 // Description: Define the authenticateService that has 3 functionalities: login, logout, and islogged
 app.factory('AuthService', ['$rootScope', '$cookies',
-    function($rootScope, $cookies){
+    function($scope, $cookies){
         return {
             WriteCookie: function(user) {
                 $cookies.put("User", user);
@@ -14,14 +14,14 @@ app.factory('AuthService', ['$rootScope', '$cookies',
 
             RemoveCookie: function() {
                 $cookies.remove('User');
-                $rootScope.user = undefined;
+                $scope.user = undefined;
             },
 
             CheckCookie: function() {
                 if($cookies.get('User') === '' || $cookies.get('User') === null || $cookies.get('User') === undefined) {
                     return false;
                 }
-                $rootScope.user = $cookies.get('User');
+                $scope.user = $cookies.get('User');
                 return true;
             }
         }
