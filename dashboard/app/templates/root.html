@@ -8,13 +8,13 @@
     <div class="content">
         <div class="root-sidebar">
             <ul>
-                <li><span class="glyphicon glyphicon-home"></span> Overview</li>
-                <li><span class="glyphicon glyphicon-th"></span> Work</li>
-                <li><span class="glyphicon glyphicon-file"></span> Producer</li>
-                <li><span class="glyphicon glyphicon-envelope"></span> Contact</li>
+                <li ui-sref-active="active"><a ui-sref="root.overview"><span class="glyphicon glyphicon-home"></span> Overview</a></li>
+                <li ui-sref-active="active"><a ui-sref="root.work"><span class="glyphicon glyphicon-th"></span> Work</a></li>
+                <li ui-sref-active="active"><a ui-sref="root.producer"><span class="glyphicon glyphicon-file"></span> Producer</a></li>
+                <li ui-sref-active="active"><a ui-sref="root.contact"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
             </ul>
-        </div><!--
-        --><div class="root-content"></div>
+        </div>
+        <div class="root-content" ui-view></div>
     </div>
 
 </div>

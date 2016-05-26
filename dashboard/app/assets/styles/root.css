@@ -40,11 +40,12 @@
 }
 
 .root-content {
-    float: right;
-    width: 85vw;
+    /*float: right;*/
+    width: 80vw;
     height: 92vh;
     background-color: red;
     display: inline-block;
+    margin-left: auto;
 }
 
 .log-out {
