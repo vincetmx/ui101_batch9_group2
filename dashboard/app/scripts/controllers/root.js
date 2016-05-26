@@ -24,5 +24,4 @@ app.controller('rootCtrl', function($scope, $cookies, $interval, $location, Auth
         AuthService.RemoveCookie();
         $location.path('/login');
     }
-
 });

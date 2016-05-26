@@ -21,7 +21,7 @@ app.factory('AuthService', ['$rootScope', '$cookies',
                 if($cookies.get('User') === '' || $cookies.get('User') === null || $cookies.get('User') === undefined) {
                     return false;
                 }
-                $rootScope.user = $cookieStore.get('User');
+                $rootScope.user = $cookies.get('User');
                 return true;
             }
         }
