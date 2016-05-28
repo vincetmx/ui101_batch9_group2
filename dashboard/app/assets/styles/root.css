@@ -83,7 +83,7 @@
 .root-content {
     /*float: right;*/
     width: 80vw;
-    background-color: red;
+    /*background-color: red;*/
     display: inline-block;
     margin-left: auto;
 }

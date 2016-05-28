@@ -1,3 +1,16 @@
-<div>
-    This is work page.
+<div class="works-container" ng-controller="workCtrl">
+    <div class="works-header">
+        <button>Select design</button>
+        <button>Add Item</button>
+        <input placeholder="Name">
+        <input placeholder="Author">
+        <input placeholder="Like">
+        <input placeholder="Comment">
+    </div>
+    <div class="works-content" ng-model="works">
+        <div>
+            {{works}}
+        </div>
+
+    </div>
 </div>
