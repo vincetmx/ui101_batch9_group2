@@ -11,7 +11,7 @@ app.controller('workCtrl', ['$scope', '$http',
             //data:
         })
             .success(function(data, status, headers, config, statusText) {
-                $scope.works = data;
+                $scope.workFile = data;
             })
             .error(function() {
 
