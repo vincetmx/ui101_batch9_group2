@@ -8,8 +8,9 @@
         <input placeholder="Comment">
     </div>
     <div class="works-content" ng-model="works">
-        <div>
-            {{works}}
+        {{works}}
+        <div ng-repeat="work in works">
+            {{work}}
         </div>
 
     </div>
