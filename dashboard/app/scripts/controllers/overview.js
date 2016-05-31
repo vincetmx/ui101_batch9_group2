@@ -5,6 +5,11 @@
 
 app.controller('overviewCtrl', ['$scope', '$http', '$cookies', 'AuthService',
     function($scope, $http, $cookies, AuthService){
+        $scope.workIsCollapsed = false;
+        $scope.producerIsCollapsed = false;
+        $scope.contactIsCollapsed = false;
+
+
         $http({
             url: '/api/profile',
             method: 'GET'

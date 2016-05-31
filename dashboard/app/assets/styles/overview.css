@@ -32,9 +32,25 @@
 }
 
 .section {
+    width: 100%;
     border: 1px solid lightgrey;
     padding: 1vh 1vw;
-    margin: 3vh 0;
+    /*margin: 3vh 0;*/
     font-weight: bold;
     background-color: whitesmoke;
+    border-radius: 10px;
+    outline: none;
+}
+
+.overview-description-button {
+    margin: 3vh 0;
+    text-align: left;
+}
+
+div.well {
+    background-color: white;
+    padding: 3vh 2vw;
+    font-family: "Leelawadee UI";
+    font-size: x-large;
+    border-radius: 10px;
 }

@@ -5,9 +5,28 @@
             <div class="overview-description-title">{{overviewProfile.username}} - {{overviewProfile.nickname}}</div>
             <img class="overview-description-image" src="{{overviewProfile.profileImage}}">
             <div class="overview-description-descrip">Welcome to dashboard application. This application guide will introduce you to things that you can do while staying here. All the sections mentioned below can be accessed from the navigation menu on the left side.</div>
-            <div class="section">Work Section</div>
-            <div class="section">Producer Section</div>
-            <div class="section">Contact Section</div>
+
+            <div class="overview-description-button">
+                <button class="section text-left" ng-click="workIsCollapsed = !workIsCollapsed">Work Section</button>
+                <div uib-collapse="!workIsCollapsed">
+                    <div class="well well-sm">This section contains demonstration for all the final products that has been produced in the market.</div>
+                </div>
+            </div>
+
+            <div class="overview-description-button">
+                <button class="section text-left" ng-click="producerIsCollapsed = !producerIsCollapsed">Producer Section</button>
+                <div uib-collapse="!producerIsCollapsed">
+                    <div class="well well-sm">This section contains information about the creator of all the works and how to get in touch with them.</div>
+                </div>
+            </div>
+
+            <div class="overview-description-button">
+                <button class="section text-left" ng-click="contactIsCollapsed = !contactIsCollapsed">Contact Section</button>
+                <div uib-collapse="!contactIsCollapsed">
+                    <div class="well well-sm">This section provides a gateway for users to voice out opinions regarding the application and any other questionsor concerns that on might have.</div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

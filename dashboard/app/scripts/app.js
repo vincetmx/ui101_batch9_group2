@@ -8,7 +8,7 @@
  * Main module of the application. Define the routing architecture for the app
  */
 
-var app = angular.module('myApp', ['ui.router', 'ngCookies', 'ngAnimate']);
+var app = angular.module('myApp', ['ui.router', 'ngCookies', 'ngAnimate', 'ui.bootstrap']);
 app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/login');
 
