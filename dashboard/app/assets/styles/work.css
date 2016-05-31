@@ -5,9 +5,13 @@
 .works-header {
     margin: 20px;
 }
-.works-header input{
+.works-header input.form-control{
     float: right;
     margin: 0 1px;
+    width: 10vw;
+}
+.works-header input{
+    float: right;
 }
 
 .works-content {
