@@ -6,9 +6,9 @@
 app.controller('loginCtrl', ['$scope', '$http', '$location', 'AuthService', function($scope, $http, $location, AuthService){
     // check login cookie
 
-    //if(!AuthService.CheckCookie()){
-    //    $location.path('root/overview');
-    //}
+    if(AuthService.CheckCookie()){
+        $location.path('root/overview');
+    }
 
     var user = function(username, password) {
         this.userName = username;

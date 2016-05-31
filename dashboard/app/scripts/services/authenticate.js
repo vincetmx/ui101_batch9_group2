@@ -41,7 +41,7 @@ app.service('AuthService', ['$rootScope', '$cookies',
 
      this.RemoveCookie = function() {
         $cookies.remove('User');
-        $cookies.User == undefine;
+        $cookies.User == undefined;
      };
 
      this.CheckCookie = function() {
