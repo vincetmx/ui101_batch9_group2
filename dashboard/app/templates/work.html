@@ -9,7 +9,7 @@
             <input type="search" class="form-control" ng-model="search.title" placeholder="Name">
     </div>
     <div class="works-content" ng-model="workFile">
-        <div class="work-tiles" ng-repeat="work in workFile.works | filter:search as result">
+        <div class="work-tiles animate-repeat" ng-repeat="work in workFile.works | filter:search as result">
             <img class="work-image" src="{{work.image}}">
             <div class="work-title">{{work.title}}</div>
             <div class="work-author">{{work.author}}</div>
@@ -17,7 +17,7 @@
             <div class="work-comment">{{work.comment}}</div>
             <div class="edit-delete"><a ui-sref="root.work">Edit</a> | <a ui-sref="root.work">Delete</a></div>
         </div>
-        <div ng-if="result.length == 0">
+        <div class="animate-repeat" ng-if="result.length == 0">
             <img src="../assets/images/src/app/No-results-found.jpg">
         </div>
     </div>
