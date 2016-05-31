@@ -5,7 +5,36 @@
 .works-header {
     margin: 20px;
 }
+.works-header input{
+    float: right;
+    margin: 0 1vw;
+}
 
 .works-content {
     margin: 20px;
+}
+
+.work-tiles {
+    width: 30%;
+    display: inline-block;
+    /*background-color: red;*/
+    margin: 2vh 1vw;
+}
+
+.work-image {
+    width: 100%;
+    height: 100%;
+}
+
+.work-title {
+    font-weight: bold;
+    margin: 1vh 0px;
+}
+
+.work-author {
+    color: #33cc33;
+}
+
+.edit-delete {
+    float: right;
 }

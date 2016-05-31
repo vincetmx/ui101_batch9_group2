@@ -1,16 +1,20 @@
 <div class="works-container" ng-controller="workCtrl">
-    <div class="works-header">
-        <button>Select design</button>
-        <button>Add Item</button>
-        <input placeholder="Name">
-        <input placeholder="Author">
-        <input placeholder="Like">
-        <input placeholder="Comment">
+    <div class="works-header form-inline form-group">
+            <button class="select btn btn-primary">Select design</button>
+            <button class="select btn btn-danger">Add Item</button>
+            <input type="search" class="form-control" placeholder="Name">
+            <input type="search" class="form-control" placeholder="Author">
+            <input type="search" class="form-control" placeholder="Like">
+            <input type="search" class="form-control" placeholder="Comment">
     </div>
     <div class="works-content" ng-model="workFile">
-        {{workFile}}
-        <div ng-repeat="work in workFile.works">
-            {{work}}
+        <div class="work-tiles" ng-repeat="work in workFile.works">
+            <img class="work-image" src="{{work.image}}">
+            <div class="work-title">{{work.title}}</div>
+            <div class="work-author">{{work.author}}</div>
+            <div class="work-like">{{work.like}}</div>
+            <div class="work-comment">{{work.comment}}</div>
+            <div class="edit-delete"><a ui-sref="root.work">Edit</a> | <a ui-sref="root.work">Delete</a></div>
         </div>
 
     </div>
