@@ -17,12 +17,16 @@ app.controller('workCtrl', ['$scope', '$http',
 
             });
 
+        $scope.displayModel = 'card';
+
         $scope.searchReset = function() {
             $scope.search.title = "";
             $scope.search.like = "";
             $scope.search.comment = "";
             $scope.search.author = "";
         };
+
+
 
     }
 ]);
