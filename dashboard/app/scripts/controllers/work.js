@@ -16,5 +16,13 @@ app.controller('workCtrl', ['$scope', '$http',
             .error(function() {
 
             });
+
+        $scope.searchReset = function() {
+            $scope.search.title = "";
+            $scope.search.like = "";
+            $scope.search.comment = "";
+            $scope.search.author = "";
+        };
+
     }
 ]);
