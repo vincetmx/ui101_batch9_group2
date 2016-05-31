@@ -2,13 +2,13 @@
     <div class="works-header form-inline form-group">
             <button class="select btn btn-primary">Select design</button>
             <button class="select btn btn-danger">Add Item</button>
-            <input type="search" class="form-control" placeholder="Name">
-            <input type="search" class="form-control" placeholder="Author">
-            <input type="search" class="form-control" placeholder="Like">
-            <input type="search" class="form-control" placeholder="Comment">
+            <input type="search" class="form-control" ng-model="search.comment" placeholder="Comment">
+            <input type="search" class="form-control" ng-model="search.like" placeholder="Like">
+            <input type="search" class="form-control" ng-model="search.author" placeholder="Author">
+            <input type="search" class="form-control" ng-model="search.title" placeholder="Name">
     </div>
     <div class="works-content" ng-model="workFile">
-        <div class="work-tiles" ng-repeat="work in workFile.works">
+        <div class="work-tiles" ng-repeat="work in workFile.works | filter:search">
             <img class="work-image" src="{{work.image}}">
             <div class="work-title">{{work.title}}</div>
             <div class="work-author">{{work.author}}</div>
