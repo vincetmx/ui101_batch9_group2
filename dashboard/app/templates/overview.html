@@ -1,3 +1,13 @@
-<div>
-    This is overview page.
+<div class="overview-container" ng-controller="overviewCtrl">
+    <div class="overview-title">Overview</div>
+    <div class="overview-content">
+        <div class="overview-description" ng-model="overviewProfile">
+            <div class="overview-description-title">{{overviewProfile.username}} - {{overviewProfile.nickname}}</div>
+            <img class="overview-description-image" src="{{overviewProfile.profileImage}}">
+            <div class="overview-description-descrip">Welcome to dashboard application. This application guide will introduce you to things that you can do while staying here. All the sections mentioned below can be accessed from the navigation menu on the left side.</div>
+            <div class="section">Work Section</div>
+            <div class="section">Producer Section</div>
+            <div class="section">Contact Section</div>
+        </div>
+    </div>
 </div>

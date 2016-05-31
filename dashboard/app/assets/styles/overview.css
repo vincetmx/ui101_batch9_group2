@@ -1,0 +1,40 @@
+.overview-title {
+    margin: 3vh;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.overview-content {
+    margin: 3vh;
+    background-color: #f0f5f5;
+}
+
+.overview-description {
+    padding: 5vh 5vw;
+
+}
+
+.overview-description-title {
+    font-weight: bold;
+    margin: 0vh 0 5vh 0;
+}
+
+.overview-description-image {
+    width: 20%;
+    height: 20%;
+    margin: 0vh 0 5vh 0;
+}
+
+.overview-description-descrip {
+    margin: 0vh 0 5vh 0;
+    font-family: "Berlin Sans FB";
+    font-size: x-large;
+}
+
+.section {
+    border: 1px solid lightgrey;
+    padding: 1vh 1vw;
+    margin: 3vh 0;
+    font-weight: bold;
+    background-color: whitesmoke;
+}
