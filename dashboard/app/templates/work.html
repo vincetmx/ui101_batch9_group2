@@ -21,11 +21,11 @@
 
         <div class="works-content-card" ng-show="displayModel === 'card'">
             <div class="work-tiles animate-repeat" ng-repeat="work in workFile.works | filter:search as result">
-                <img class="work-image" src="{{work.image}}">
-                <div class="work-title">{{work.title}}</div>
-                <div class="work-author">{{work.author}}</div>
-                <div class="work-like">{{work.like}}</div>
-                <div class="work-comment">{{work.comment}}</div>
+                <img class="work-image" ng-src="{{work.image}}">
+                <div class="work-title" ng-bind="work.title"></div>
+                <div class="work-author" ng-bind="work.author"></div>
+                <div class="work-like" ng-bind="work.like"></div>
+                <div class="work-comment" ng-bind="work.comment"></div>
                 <div class="edit-delete"><a ui-sref="root.work">Edit</a> | <a ui-sref="root.work">Delete</a></div>
             </div>
             <div class="animate-repeat" ng-if="result.length == 0">
@@ -34,23 +34,23 @@
         </div>
 
         <div class="works-content-list" ng-show="displayModel === 'list'">
-            <table class="table table-striped">
+            <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Author</th>
-                        <th>Like</th>
-                        <th>Comment</th>
+                        <th><a class="works-content-list-head" ng-click="reverse=!reverse;order('title', reverse)">Name</a></th>
+                        <th><a class="works-content-list-head" ng-click="reverse=!reverse;order('author', reverse)">Author</a></th>
+                        <th><a class="works-content-list-head" ng-click="reverse=!reverse;order('like', reverse)">Like</a></th>
+                        <th><a class="works-content-list-head" ng-click="reverse=!reverse;order('comment', reverse)">Comment</a></th>
                         <th>Modify</th>
                         <th>Remove</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="animate-repeat" ng-repeat="work in workFile.works | filter:search as result">
-                        <th>{{work.title}}</th>
-                        <th>{{work.author}}</th>
-                        <th>{{work.like}}</th>
-                        <th>{{work.comment}}</th>
+                    <tr class="animate-repeat" ng-repeat="work in workFile.works | orderBy: category | filter:search as result">
+                        <th ng-bind="work.title"></th>
+                        <th ng-bind="work.author"></th>
+                        <th ng-bind="work.like"></th>
+                        <th ng-bind="work.comment"></th>
                         <th><a ui-sref="root.work">Edit</a></th>
                         <th><a ui-sref="root.work">Delete</a></th>
                     </tr>

@@ -3,22 +3,26 @@
 // Description: Define the following functionalities:
 // All the functionalities on the "Work" section to display items and filter them
 
-app.controller('workCtrl', ['$scope', '$http',
-    function($scope, $http){
+app.controller('workCtrl', ['$scope', '$http', '$filter',
+    function($scope, $http, $filter){
+
+        //
         $http({
             method: 'GET',
             url: '/api/work',
             //data:
         })
-            .success(function(data, status, headers, config, statusText) {
-                $scope.workFile = data;
-            })
-            .error(function() {
+        .success(function(data, status, headers, config, statusText) {
+            $scope.workFile = data;
+        })
+        .error(function() {
 
-            });
+        });
 
+        //
         $scope.displayModel = 'card';
 
+        //
         $scope.searchReset = function() {
             $scope.search.title = "";
             $scope.search.like = "";
@@ -26,7 +30,9 @@ app.controller('workCtrl', ['$scope', '$http',
             $scope.search.author = "";
         };
 
-
-
+        var orderBy = $filter('orderBy');
+        $scope.order = function(prediate, reverse) {
+            $scope.workFile.works = orderBy($scope.workFile.works, prediate, reverse);
+        }
     }
 ]);
