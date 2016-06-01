@@ -9,7 +9,7 @@
             </ul>
         </div>
 
-        <button class="select btn btn-danger" style="outline: none">Add Item</button>
+        <button class="select btn btn-danger" style="outline: none" ng-click="addItem()">Add Item</button>
         <input type="button" class="btn btn-warning" ng-click="searchReset()" value="Reset" style="outline: none">
         <input type="search" class="form-control" ng-model="search.comment" placeholder="Comment">
         <input type="search" class="form-control" ng-model="search.like" placeholder="Like">
@@ -46,13 +46,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="animate-repeat" ng-repeat="work in workFile.works | orderBy: category | filter:search as result">
+                    <tr class="animate-repeat" ng-repeat="work in workFile.works | filter:search as result">
                         <th ng-bind="work.title"></th>
                         <th ng-bind="work.author"></th>
                         <th ng-bind="work.like"></th>
                         <th ng-bind="work.comment"></th>
                         <th><a ui-sref="root.work">Edit</a></th>
-                        <th><a ui-sref="root.work">Delete</a></th>
+                        <th><a ui-sref="root.work" ng-click="delete()">Delete</a></th>
                     </tr>
                 </tbody>
             </table>
