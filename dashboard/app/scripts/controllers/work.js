@@ -15,9 +15,6 @@ app.controller('workCtrl', ['$scope', '$http', '$filter',
         .success(function(data, status, headers, config, statusText) {
             $scope.workFile = data;
         })
-        .error(function() {
-
-        });
 
         //
         $scope.displayModel = 'card';
