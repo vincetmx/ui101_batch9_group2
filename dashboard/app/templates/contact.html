@@ -31,9 +31,16 @@
                 </div>
 
                 <label for="state">State</label>
-                <select name="selectState" class="form-control" id="state" ng-model="states">
-                    <option ng-repeat="option in states.locations" value="{{option.title}}">{{option.title}}</option>
+
+                <select name="selectState" class="form-control" id="state">
+                    <option value="">-- choose state --</option>
+                    <option ng-repeat="option in states.locations" value="option.title">{{option.title}}</option>
                 </select>
+
+                // another way use ng-option
+                <!--<select>-->
+                    <!---->
+                <!--</select>-->
 
 
             </form>
