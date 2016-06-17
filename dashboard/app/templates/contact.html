@@ -2,88 +2,88 @@
     <p>Contact</p>
 
     <uib-tabset active="active" justified="true">
-        <uib-tab index="0" heading="Information" >
+        <uib-tab index="0" heading="Information" active="tabs[0].active">
             <form name="information">
 
                 <label for="firstname">First Name</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="firstname" placeholder="Firstname" aria-describedby="basic-addon1" ng-model="firstName">
+                    <input type="text" class="form-control" id="firstname" placeholder="Firstname" aria-describedby="basic-addon1" ng-model="firstName" required>
                     <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
                 </div>
                 <br>
 
                 <label for="lastname">Last Name</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="lastname" placeholder="Lastname" ng-model="lastName">
+                    <input type="text" class="form-control" id="lastname" placeholder="Lastname" ng-model="lastName" required>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                 </div>
                 <br>
 
                 <label for="email">Email</label>
                 <div class="input-group">
-                    <input type="email" class="form-control" id="email" placeholder="Email" ng-model="email">
+                    <input type="email" class="form-control" id="email" placeholder="Email" ng-model="email" required>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
                 </div>
                 <br>
 
                 <label for="phone">Phone</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="phone" placeholder="Phone" ng-model="phone">
+                    <input type="text" class="form-control" id="phone" placeholder="Phone" ng-model="phone" required>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
                 </div>
                 <br>
 
                 <label for="state">State</label>
-                <select name="selectState" class="form-control" id="state" ng-model="optionState">
+                <select name="selectState" class="form-control" id="state" ng-model="optionState" required>
                     <option value="">-- choose state --</option>
                     <option ng-repeat="option in states.locations" value="{{option.title}}">{{option.title}}</option>
                 </select>
                 <br>
                 <hr />
                 <br>
-                <button type="button" class="btn btn-primary">Next</button>
-
-
+                <button type="button" class="btn btn-primary" ng-disabled="!information.$valid" ng-click="queryActived = 0; tabs[1].active = true">Next</button>
             </form>
+
         </uib-tab>
 
-        <uib-tab index="1" heading="Query">
+        <uib-tab index="1" heading="Query" disable="((queryActived) || (!information.$valid))" active="tabs[1].active">
+
             <form name="query">
 
                 <div class="query-title">
                     <label for="title">Title</label>
-                    <input type="text" id="title" class="form-control" ng-model="title">
+                    <input type="text" id="title" class="form-control" ng-model="title" required>
                 </div>
                 <br>
 
                 <div class="query-content">
                     <label for="content">Content</label>
-                    <textarea id="content" class="form-control" rows="5" ng-model="content"></textarea>
+                    <textarea id="content" class="form-control" rows="5" ng-model="content" required></textarea>
                 </div>
                 <br>
 
                 <div class="query-catetory">
                     <label for="category">Catetory</label>
-                    <select ng-options="option.title for option in queryCategories.categories track by option.value" id="category" ng-model="queryTempCategory" class="form-control"></select>
+                    <select ng-options="option.title for option in queryCategories.categories track by option.value" id="category" ng-model="queryTempCategory" class="form-control" required></select>
                 </div>
                 <br>
                 <div>
-                    <h4>Default</h4>
-                    <uib-rating ng-model="rate" max="max" on-hover="hoveringOver(value)" on-leave="rateLeave()" ></uib-rating>
+                    <h4>Priority</h4>
+                    <uib-rating ng-model="rate" max="max" on-hover="hoveringOver(value)" on-leave="rateLeave()"required></uib-rating>
                     <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}">{{percent}}%</span>
 
                     <br>
-                    <button type="button" class="btn btn-sm btn-danger" ng-click="" >Clear</button>
+                    <button type="button" class="btn btn-sm btn-danger" ng-click="">Clear</button>
                     <hr />
                 </div>
 
                 <br>
                 <br>
-                <button class="btn btn-primary">Next</button>
+                <button class="btn btn-primary" ng-disabled="!query.$valid" ng-click="conformActived = 0; tabs[2].active = true">Next</button>
             </form>
         </uib-tab>
 
-        <uib-tab index="2" heading="Confirmation">
+        <uib-tab index="2" heading="Confirmation" disable="((conformActived) || (!query.$valid))" active="tabs[2].active">
             <hr>
             <h1>Information</h1>
             <div>

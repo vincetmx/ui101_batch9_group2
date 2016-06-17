@@ -43,5 +43,8 @@ app.controller('contactCtrl',['$scope', '$http',
             $scope.percent = $scope.rate * 10;
         }
 
+        $scope.queryActived = 1;
+        $scope.conformActived = 1;
+
     }
 ]);
