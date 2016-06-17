@@ -43,4 +43,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: '../templates/contact.html'
             //controller: ''
         })
+        .state('root.video', {
+            url: '/video',
+            templateUrl: '../templates/video.html'
+        })
+        .state('root.map', {
+            url: '/map',
+            templateUrl: '../templates/map.html'
+        })
+        .state('root.todoList', {
+            url: '/todoList',
+            templateUrl: '../templates/todoList.html'
+        })
 });
