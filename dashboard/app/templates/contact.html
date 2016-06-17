@@ -49,7 +49,35 @@
         </uib-tab>
 
         <uib-tab index="1" heading="Query">
+            <form name="query">
+                <label for="title">Title</label>
+                <div class="query-title">
+                    <input type="text" id="title" class="form-control">
+                </div>
 
+                <label for="content">Content</label>
+                <div class="query-content">
+                    <input type="text" id="content" class="form-control">
+                </div>
+
+                <label for="category">Catetory</label>
+                <div class="query-catetory">
+                    <select ng-options="option.title for option in queryCategories.categories track by option.value" id="category" ng-model="queryTempCategory" class="form-control"></select>
+                </div>
+
+                <!--<label for="priority">Priority</label>-->
+                <!--<div class="query-priority">-->
+
+                <!--</div>-->
+
+                <!--<div style="padding-top:25px;">-->
+                    <!--<label for="priority">Priority</label>-->
+                    <!--<uib-rating ng-model="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>-->
+                    <!--<span id="priority" class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>-->
+                <!--</div>-->
+
+                <button>Next</button>
+            </form>
         </uib-tab>
 
         <uib-tab index="2" heading="Confirmation">

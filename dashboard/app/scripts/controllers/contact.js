@@ -10,12 +10,26 @@ app.controller('contactCtrl',['$scope', '$http',
             url: '/api/location',
         })
         .success(function(data, status, headers, config, statusText){
-            //console.log('Success');
             $scope.states = data;
-            //console.log($scope.states);
         })
         .error(function(){
-            alert('$http call fails');
+            alert('$http call fails.');
         });
+
+        $http({
+            method: 'GET',
+            url: '/api/category',
+        })
+            .success(function(data, status, headers, config, statusText){
+                console.log(data);
+                $scope.queryCategories = data;
+                $scope.queryTempCategory = {
+                    value: '',
+                    title: ''
+                }
+            })
+            .error(function(){
+                alert('$http call categry fails.');
+            });
     }
 ]);
