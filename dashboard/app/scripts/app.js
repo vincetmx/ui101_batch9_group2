@@ -44,15 +44,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
             //controller: ''
         })
         .state('root.video', {
-            url: '/video',
+            url: '/producer/video',
             templateUrl: '../templates/video.html'
         })
         .state('root.map', {
-            url: '/map',
+            url: '/producer/map',
             templateUrl: '../templates/map.html'
         })
         .state('root.todoList', {
-            url: '/todoList',
+            url: '/producer/todoList',
             templateUrl: '../templates/todoList.html'
         })
 });
