@@ -9,19 +9,18 @@ app.controller('contactCtrl',['$scope', '$http',
             method: 'GET',
             url: '/api/location',
         })
-        .success(function(data, status, headers, config, statusText){
-            $scope.states = data;
-        })
-        .error(function(){
+            .success(function(data, status, headers, config, statusText){
+                $scope.states = data;
+            })
+            .error(function(){
             alert('$http call fails.');
-        });
+            });
 
         $http({
             method: 'GET',
             url: '/api/category',
         })
             .success(function(data, status, headers, config, statusText){
-                console.log(data);
                 $scope.queryCategories = data;
                 $scope.queryTempCategory = {
                     value: '',
@@ -31,5 +30,18 @@ app.controller('contactCtrl',['$scope', '$http',
             .error(function(){
                 alert('$http call categry fails.');
             });
+
+
+        $scope.max = 10;
+        $scope.percent = 0;
+
+        $scope.hoveringOver = function(value) {
+            $scope.percent = 100 * (value / $scope.max);
+        };
+
+        $scope.rateLeave = function(){
+            $scope.percent = $scope.rate * 10;
+        }
+
     }
 ]);
