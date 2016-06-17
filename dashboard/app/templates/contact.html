@@ -64,7 +64,9 @@
 
                 <div class="query-catetory">
                     <label for="category">Catetory</label>
-                    <select ng-options="option.title for option in queryCategories.categories track by option.value" id="category" ng-model="queryTempCategory" class="form-control" required></select>
+                    <select ng-options="option.title for option in queryCategories.categories track by option.value" id="category" ng-model="queryTempCategory" class="form-control" required>
+                        <option value="">-- Choose a category --</option>
+                    </select>
                 </div>
                 <br>
                 <div>

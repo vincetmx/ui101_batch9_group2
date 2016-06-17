@@ -1,3 +1,7 @@
 .contact-container {
 
 }
+
+input:invalid, textarea:invalid, select:invalid {
+    background-color: #FFDDDD;
+}
