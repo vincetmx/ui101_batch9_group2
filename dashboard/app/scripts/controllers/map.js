@@ -3,6 +3,6 @@
  */
 app.controller('mapCtrl', ['$scope',
     function($scope){
-        
+
     }
 ]);
