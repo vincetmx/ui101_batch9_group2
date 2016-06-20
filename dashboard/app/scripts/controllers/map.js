@@ -6,3 +6,4 @@ app.controller('mapCtrl', ['$scope',
 
     }
 ]);
+
