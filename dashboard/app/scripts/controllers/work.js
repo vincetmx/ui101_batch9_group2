@@ -3,8 +3,8 @@
 // Description: Define the following functionalities:
 // All the functionalities on the "Work" section to display items and filter them
 
-app.controller('workCtrl', ['$scope', '$http', '$filter',
-    function($scope, $http, $filter){
+app.controller('workCtrl', ['$scope', '$http', '$filter', '$uibModal',
+    function($scope, $http, $filter, $uibModal){
 
         //
         $http({
@@ -31,5 +31,25 @@ app.controller('workCtrl', ['$scope', '$http', '$filter',
         $scope.order = function(prediate, reverse) {
             $scope.workFile.works = orderBy($scope.workFile.works, prediate, reverse);
         }
+
+
+        // open modal
+
+        $scope.workOpen = function (size) {
+            var modalInstance = $uibModal.open({
+                animation: true,
+                templateUrl: 'myModalContent.html',
+                controller: 'workCtrl',
+                size: size,
+                keyboard: true,
+                templateUrl:'../templates/confirmBox.html',
+                //resolve: {
+                //    items: function () {
+                //        return $scope.items;
+                //    }
+                //}
+            });
+        };
+
     }
 ]);

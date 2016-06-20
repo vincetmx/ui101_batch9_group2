@@ -17,6 +17,10 @@
         <input type="search" class="form-control" ng-model="search.title" placeholder="Name">
     </div>
 
+    <div>
+        <script type="text/ng-template" id="myModalContent.html"></script>
+    </div>
+
     <div class="works-container" ng-model="workFile">
 
         <div class="works-content-card" ng-show="displayModel === 'card'">
@@ -26,7 +30,7 @@
                 <div class="work-author" ng-bind="work.author"></div>
                 <div class="work-like" ng-bind="work.like"></div>
                 <div class="work-comment" ng-bind="work.comment"></div>
-                <div class="edit-delete"><a ui-sref="root.work">Edit</a> | <a ui-sref="root.work">Delete</a></div>
+                <div class="edit-delete"><a ui-sref="root.work">Edit</a> | <a ui-sref="root.work" ng-click="workOpen()">Delete</a></div>
             </div>
             <div class="animate-repeat" ng-if="result.length == 0">
                 <img src="../assets/images/src/app/No-results-found.jpg">
@@ -53,8 +57,8 @@
                         <th ng-bind="work.author"></th>
                         <th ng-bind="work.like"></th>
                         <th ng-bind="work.comment"></th>
-                        <th><a ui-sref="root.work">Edit</a></th>
-                        <th><a ui-sref="root.work" ng-click="delete()">Delete</a></th>
+                        <th><a ui-sref="root.work" ng-click="workEdit()">Edit</a></th>
+                        <th><a ui-sref="root.work" ng-click="workOpen()">Delete</a></th>
                     </tr>
                 </tbody>
             </table>
