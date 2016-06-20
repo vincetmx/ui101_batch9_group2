@@ -32,5 +32,49 @@ app.controller('workCtrl', ['$scope', '$http', '$filter', '$uibModal',
             $scope.workFile.works = orderBy($scope.workFile.works, prediate, reverse);
         }
 
+
+        // open modal
+        $scope.workDelete = function ($index) {
+            //alert($index);
+            var modalInstance = $uibModal.open({
+                animation: true,
+                controller: 'ModalInstanceCtrl',
+                size: '',
+                keyboard: true,
+                templateUrl:'../templates/confirmBox.html',
+                resolve: {
+                    index: function () {
+                        //return $scope.items;
+                        return $index;
+                    },
+
+                }
+            });
+
+
+            modalInstance.result.then(function ($index) {
+                console.log($scope.workFile.works);
+                $scope.workFile.works.splice($index, 1);
+            }, function () {
+                $log.info('Modal dismissed at: ' + new Date());
+            });
+        };
+
     }
 ]);
+
+app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, index) {
+
+    //$scope.items = items;
+    //$scope.selected = {
+    //    item: $scope.items[0]
+    //};
+
+    $scope.ok = function () {
+        $uibModalInstance.close('delete a item');
+    };
+
+    $scope.cancel = function () {
+        $uibModalInstance.dismiss('cancel');
+    };
+});
