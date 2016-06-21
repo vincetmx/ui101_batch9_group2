@@ -1,4 +1,4 @@
-<div class="works-container" ng-controller="workCtrl">
+<div class="works-container" ng-controller="workCtrl" ng-model="workFile">
     <div class="works-header form-inline form-group">
 
         <div class="btn-group" uib-dropdown is-open="status.isopen">
@@ -17,11 +17,15 @@
         <input type="search" class="form-control" ng-model="search.title" placeholder="Name">
     </div>
 
-    <div>
+    <div class="delete">
         <script type="text/ng-template" id="myModalContent.html"></script>
     </div>
 
-    <div class="works-container" ng-model="workFile">
+    <div class="edit">
+        <script type="text/ng-template" id="myModalContent.html"></script>
+    </div>
+
+    <div class="works-container">
 
         <div class="works-content-card" ng-show="displayModel === 'card'">
             <div class="work-tiles animate-repeat" ng-repeat="work in workFile.works | filter:search as result">
@@ -30,7 +34,7 @@
                 <div class="work-author" ng-bind="work.author"></div>
                 <div class="work-like" ng-bind="work.like"></div>
                 <div class="work-comment" ng-bind="work.comment"></div>
-                <div class="edit-delete"><a ui-sref="root.work">Edit</a> | <a ui-sref="root.work" ng-click="workDelete($index)">Delete</a></div>
+                <div class="edit-delete"><a ui-sref="root.work" ng-click="workEdit(work)">Edit</a> | <a ui-sref="root.work" ng-click="workDelete($index)">Delete</a></div>
             </div>
             <div class="animate-repeat" ng-if="result.length == 0">
                 <img src="../assets/images/src/app/No-results-found.jpg">
@@ -57,7 +61,7 @@
                         <th ng-bind="work.author"></th>
                         <th ng-bind="work.like"></th>
                         <th ng-bind="work.comment"></th>
-                        <th><a ui-sref="root.work" ng-click="workEdit()">Edit</a></th>
+                        <th><a ui-sref="root.work" ng-click="workEdit(work)">Edit</a></th>
                         <th><a ui-sref="root.work" ng-click="workDelete($index)">Delete</a></th>
                     </tr>
                 </tbody>
