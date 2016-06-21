@@ -47,13 +47,13 @@ app.controller('workCtrl', ['$scope', '$http', '$filter', '$uibModal',
                         //return $scope.items;
                         return $index;
                     },
-
                 }
             });
 
 
-            modalInstance.result.then(function ($index) {
+            modalInstance.result.then(function () {
                 console.log($scope.workFile.works);
+
                 $scope.workFile.works.splice($index, 1);
             }, function () {
                 $log.info('Modal dismissed at: ' + new Date());
@@ -71,7 +71,8 @@ app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, index) 
     //};
 
     $scope.ok = function () {
-        $uibModalInstance.close('delete a item');
+        //console.log(index);
+        $uibModalInstance.close('delete the ' + index + 'th item');
     };
 
     $scope.cancel = function () {
