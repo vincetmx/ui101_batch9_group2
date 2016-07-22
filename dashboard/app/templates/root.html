@@ -16,8 +16,7 @@
                 <li ui-sref-active="active"><a ui-sref="root.overview"><span class="glyphicon glyphicon-home"></span> Overview</a></li>
                 <a ui-sref="root.work"><li ui-sref-active="active"><span class="glyphicon glyphicon-th"></span> Work</li></a>
 
-
-                <a>
+                <a class="dropdown">
                     <li ui-sref-active="active" ng-mouseenter="show = true" ng-mouseleave="show = false"><span class="glyphicon glyphicon-file"></span> Producer
                         <ul class="subMenu" ng-if="show" >
                             <a ui-sref="root.video"><li><span class="glyphicon glyphicon-play-circle"></span> Vedio</li></a>
@@ -25,10 +24,7 @@
                             <a ui-sref="root.todoList"><li><span class="glyphicon glyphicon-th-list"></span> Todolist</li></a>
                         </ul>
                     </li>
-
                 </a>
-
-
 
                 <a ui-sref="root.contact"><li ui-sref-active="active"><span class="glyphicon glyphicon-envelope"></span> Contact</li></a>
             </ul>
