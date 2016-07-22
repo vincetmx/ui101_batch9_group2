@@ -2,9 +2,9 @@ var express = require('express');
 var router  = express.Router();
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    if (req.query.user === 'minh') {
+    if (req.query.user === 'jeff') {
         res.send({
-            name: 'Minh Pham'
+            name: 'Jeff Zhou'
         });
     } else {
         res.send({

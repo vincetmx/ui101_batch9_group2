@@ -23,5 +23,7 @@ app.controller('rootCtrl', function($scope, $cookies, $interval, $location, Auth
     $scope.logout = function() {
         AuthService.RemoveCookie();
         $location.path('/login');
-    }
+    };
+
+    $scope.show = false;
 });

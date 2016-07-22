@@ -33,9 +33,13 @@
     font-weight: bold;
 }
 
-.root-sidebar ul {
+ul.subMenu {
+/*    position: absolute;
+    left: 140px;
+    top: 21%;*/
     width: 80%;
-    margin: 0 auto;
+    margin: 0 0 0 2vw;
+    padding: 0;
 }
 
 

@@ -43,7 +43,6 @@
                 <br>
                 <button type="button" class="btn btn-primary" ng-disabled="!information.$valid" ng-click="queryActived = 1; tabs[1].active = true">Next</button>
             </form>
-
         </uib-tab>
 
         <uib-tab index="1" heading="Query" disable="!((queryActived) && (information.$valid))" active="tabs[1].active">
@@ -75,7 +74,7 @@
                     <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}">{{percent}}%</span>
 
                     <br>
-                    <button type="button" class="btn btn-sm btn-danger" ng-click="">Clear</button>
+<!--                     <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button> -->
                     <hr />
                 </div>
 
@@ -85,7 +84,7 @@
             </form>
         </uib-tab>
 
-        <uib-tab index="2" heading="Confirmation" disable="!((conformActived) && (query.$valid))" active="tabs[2].active">
+        <uib-tab index="2" heading="Confirmation" disable="!((conformActived) && (query.$valid) && (information.$valid))" active="tabs[2].active">
             <hr>
             <h1>Information</h1>
             <div>
@@ -128,7 +127,6 @@
             <hr/>
 
             <button class="btn btn-primary">Mail</button>
-
         </uib-tab>
 
     </uib-tabset>

@@ -13,13 +13,13 @@
     <div class="content">
         <div class="root-sidebar">
             <ul>
-                <a ui-sref="root.overview"><li ui-sref-active="active"><span class="glyphicon glyphicon-home"></span> Overview</li></a>
+                <li ui-sref-active="active"><a ui-sref="root.overview"><span class="glyphicon glyphicon-home"></span> Overview</a></li>
                 <a ui-sref="root.work"><li ui-sref-active="active"><span class="glyphicon glyphicon-th"></span> Work</li></a>
 
 
-                <a ui-sref="root.producer">
-                    <li ui-sref-active="active"><span class="glyphicon glyphicon-file"></span> Producer
-                        <ul>
+                <a>
+                    <li ui-sref-active="active" ng-mouseenter="show = true" ng-mouseleave="show = false"><span class="glyphicon glyphicon-file"></span> Producer
+                        <ul class="subMenu" ng-if="show" >
                             <a ui-sref="root.video"><li><span class="glyphicon glyphicon-play-circle"></span> Vedio</li></a>
                             <a ui-sref="root.map"><li><span class="glyphicon glyphicon-map-marker"></span> Map</li></a>
                             <a ui-sref="root.todoList"><li><span class="glyphicon glyphicon-th-list"></span> Todolist</li></a>
@@ -27,6 +27,7 @@
                     </li>
 
                 </a>
+
 
 
                 <a ui-sref="root.contact"><li ui-sref-active="active"><span class="glyphicon glyphicon-envelope"></span> Contact</li></a>

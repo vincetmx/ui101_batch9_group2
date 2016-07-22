@@ -9,27 +9,27 @@ app.controller('contactCtrl',['$scope', '$http',
             method: 'GET',
             url: '/api/location',
         })
-            .success(function(data, status, headers, config, statusText){
-                $scope.states = data;
-            })
-            .error(function(){
-            alert('$http call fails.');
-            });
+        .success(function(data, status, headers, config, statusText){
+            $scope.states = data;
+        })
+        .error(function(){
+        alert('$http call fails.');
+        });
 
         $http({
             method: 'GET',
             url: '/api/category',
         })
-            .success(function(data, status, headers, config, statusText){
-                $scope.queryCategories = data;
-                $scope.queryTempCategory = {
-                    value: '',
-                    title: ''
-                }
-            })
-            .error(function(){
-                alert('$http call categry fails.');
-            });
+        .success(function(data, status, headers, config, statusText){
+            $scope.queryCategories = data;
+            $scope.queryTempCategory = {
+                value: '',
+                title: ''
+            };
+        })
+        .error(function(){
+            alert('$http call categry fails.');
+        });
 
 
         $scope.max = 10;
@@ -41,10 +41,15 @@ app.controller('contactCtrl',['$scope', '$http',
 
         $scope.rateLeave = function(){
             $scope.percent = $scope.rate * 10;
-        }
+        };
+
+        // $scope.clear = function(){
+        //     $scope.percent = 0;
+        //     $scope.value = 0;
+        //     $scope.rate = 0;
+        // };
 
         $scope.queryActived = 0;
         $scope.conformActived = 0;
-
     }
 ]);

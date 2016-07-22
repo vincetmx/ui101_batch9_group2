@@ -4,10 +4,10 @@ var router  = express.Router();
 router.get('/', function(req, res, next) {
     res.send({
         profiles: [{
-            username: 'minh',
-            fullname: "Minh Pham",
+            username: 'Jeff',
+            fullname: "Jeff Zhou",
             nickname: 'The Omnipotent',
-            profileImage: 'assets/images/src/profile/minh.png'
+            profileImage: 'assets/images/src/profile/jeff.png'
         }, {
             username: 'darth',
             fullname: "Darth Vader",
